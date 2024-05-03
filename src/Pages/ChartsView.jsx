@@ -1,7 +1,11 @@
-import React from "react";
+import CoatColorChart from "../Components/CoatColorChart";
 
 const ChartsView = () => {
-  return <div>ChartsView</div>;
+  return (
+    <div>
+      <CoatColorChart />
+    </div>
+  );
 };
 
 export default ChartsView;
