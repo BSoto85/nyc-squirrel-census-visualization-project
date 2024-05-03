@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         <Route />
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
