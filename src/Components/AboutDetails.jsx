@@ -7,9 +7,9 @@ const AboutDetails = () => {
   return (
     <>
       <div className="grid lg:grid-cols-2 md:gap-2 ml-12 pb-24">
-        <div className="bg-yellow-50/40 rounded-xl mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-red-800/10 w-3/4">
+        <div className="bg-yellow-50/40 rounded-full mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-red-800/10 w-3/4">
           <div className="grid grid-cols-4 h-full">
-            <div className="bg-red-800/80 rounded-tl-lg rounded-bl-lg text-5xl text-white flex items-center justify-center col-span-1">
+            <div className="bg-red-800/80 rounded-tl-full rounded-bl-full text-5xl text-white flex items-center justify-center col-span-1">
               BS
             </div>
             <div className="pb-10 p-5 col-span-3">
@@ -103,7 +103,7 @@ const AboutDetails = () => {
                     }
                     target={"_blank"}
                   >
-                    <div className="bg-blue-400  rounded p-1 hover:bg-black">
+                    <div className="bg-blue-400 rounded p-1 hover:bg-black">
                       <Linkedin
                         strokeWidth={2}
                         className="text-white w-6 h-6"
@@ -128,9 +128,9 @@ const AboutDetails = () => {
             </div>
           </div>
         </div>
-        <div className="bg-yellow-50/40  rounded-xl mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-indigo-800/10 w-3/4 ">
+        <div className="bg-yellow-50/40 rounded-full mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-indigo-800/10 w-3/4 ">
           <div className="grid grid-cols-4 h-full">
-            <div className="bg-indigo-800/80 rounded-tl-lg rounded-bl-lg text-5xl text-white flex items-center justify-center col-span-1">
+            <div className="bg-indigo-800/80 rounded-tl-full rounded-bl-full text-5xl text-white flex items-center justify-center col-span-1">
               IB
             </div>
             <div className="pb-10 p-5 col-span-3">
