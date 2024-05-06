@@ -43,6 +43,7 @@ const ScatterChart = ({
     []
   );
 
+  Chart.defaults.font.size = 20;
   const scatterData = {
     datasets: [
       {
@@ -75,9 +76,16 @@ const ScatterChart = ({
     },
     elements: {
       point: {
-        radius: 5,
+        radius: 8,
       },
     },
+    // plugins: {
+    //   legend: {
+    //     display: true,
+    //     position: "top",
+    //     align: "end",
+    //   },
+    // },
   };
 
   useEffect(() => {
@@ -92,6 +100,7 @@ const ScatterChart = ({
 
   return (
     <div
+      className="scatter-div"
       style={
         chartType === "Scatter" ? { display: "block" } : { display: "none" }
       }

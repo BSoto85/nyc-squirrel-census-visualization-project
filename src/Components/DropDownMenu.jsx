@@ -6,9 +6,9 @@ const DropDownMenu = ({ chartType, setChartType }) => {
   console.log(chartType);
 
   return (
-    <div>
+    <div className="drop-down">
       <form>
-        <label htmlFor="chartType">Chart Type:</label>
+        <label htmlFor="chartType">Chart Type: </label>
         <select
           id="chartType"
           value={chartType}
