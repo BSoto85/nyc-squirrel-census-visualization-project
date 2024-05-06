@@ -17,7 +17,7 @@ const ChartsView = () => {
       <ScatterChart
         chartType={chartType}
         scatterAndRadarSquirrelData={scatterAndRadarSquirrelData}
-        setScatterAndRadarSquirrelData={setChartType}
+        setScatterAndRadarSquirrelData={setScatterAndRadarSquirrelData}
       />
     </div>
   );
