@@ -11,17 +11,17 @@ const NavBar = () => {
           <Squirrel size={36} className="text-zinc-100" />
         </Link>
         <div className="ml-auto flex space-x-4 mr-5">
-          <Link
+          {/* <Link
             to={"/map"}
             className="p-3 bg-yellow-50 rounded-2xl hover:bg-yellow-200"
           >
             Map
-          </Link>
+          </Link> */}
           <Link
             to={"/charts"}
             className="p-3 bg-yellow-50 rounded-2xl hover:bg-yellow-200"
           >
-            Chart
+            Charts
           </Link>
           <Link
             to={"/about"}

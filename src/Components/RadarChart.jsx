@@ -7,7 +7,9 @@ Chart.register(...registerables);
 const RadarChart = () => {
   const [squirrelData, setSquirrelData] = useState([]);
   //api endpoint is exceeding limit w/ no account will only return approx. 1000 entries
-  const apiUrl = `https://data.cityofnewyork.us/resource/vfnx-vebw.json?$query=SELECT%20x%2C%20y%2C%20unique_squirrel_id%2C%20date%2C%20primary_fur_color%20ORDER%20BY%20date%20DESC`;
+  // const apiUrl = `https://data.cityofnewyork.us/resource/vfnx-vebw.json?$query=SELECT%20x%2C%20y%2C%20unique_squirrel_id%2C%20date%2C%20primary_fur_color%20ORDER%20BY%20date%20DESC`;
+
+  const URL = import.meta.env.VITE_BASE_API_URL;
 
   const latitudeLowerRange = 40.7679908;
   const latitudeUpperRange = 40.7968755;
@@ -292,10 +294,12 @@ const RadarChart = () => {
   };
 
   useEffect(() => {
-    fetch(`${apiUrl}`)
+    fetch(
+      `${URL}?$query=SELECT%20x%2C%20y%2C%20unique_squirrel_id%2C%20date%2C%20primary_fur_color%20ORDER%20BY%20date%20DESC`
+    )
       .then((res) => res.json())
       .then((data) => {
-        console.log("Response data:", data);
+        // console.log("Response data:", data);
         setSquirrelData(data);
       })
       // .then(() => )
@@ -307,12 +311,12 @@ const RadarChart = () => {
   //latitude = y (i.e. 40.000000), longitude = x (i.e. -73.000000)
 
   // const firstSectionSquirells = squirrellData.filter((squirrel) => squirrel.x >= -73.  && squirrel.y < )
-  console.log("This is first section", firstSectionSquirrels);
-  console.log("This is second section", secondSectionSquirrels);
-  console.log("This is third section", thirdSectionSquirrels);
-  console.log("This is fourth section", fourthSectionSquirrels);
-  console.log("This is fifth section", fifthSectionSquirrels);
-  console.log("This is sixth section", sixthSectionSquirrels);
+  // console.log("This is first section", firstSectionSquirrels);
+  // console.log("This is second section", secondSectionSquirrels);
+  // console.log("This is third section", thirdSectionSquirrels);
+  // console.log("This is fourth section", fourthSectionSquirrels);
+  // console.log("This is fifth section", fifthSectionSquirrels);
+  // console.log("This is sixth section", sixthSectionSquirrels);
 
   // console.log("filtered section one", colorsFiltered(firstSectionSquirrels));
 
@@ -325,14 +329,14 @@ const RadarChart = () => {
           Squirrel Distribution Chart In Central Park
         </div>
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 gap-6 mx-4 md:grid-cols-3">
-            <div className="col-span-1 w-auto md:w-112 border-4 border-gray-300 rounded-xl hover:bg-gray-100 p-2">
+          <div className="grid grid-cols-1 gap-8 mx-4 md:grid-cols-3">
+            <div className="col-span-1 w-108 border-4 border-gray-300 rounded-xl hover:bg-gray-100 p-2">
               <Radar data={chartDataGrey} options={chartOptionsGrey} />
             </div>
-            <div className="col-span-1 w-auto md:w-112 border-4 border-amber-800/50 rounded-xl hover:bg-amber-800/10 p-2">
+            <div className="col-span-1 w-108 border-4 border-amber-800/50 rounded-xl hover:bg-amber-800/10 p-2">
               <Radar data={chartDataCinnamon} options={chartOptionsCinnamon} />
             </div>
-            <div className="col-span-1 w-auto md:w-112 border-4 border-black rounded-xl hover:bg-black/10 p-2">
+            <div className="col-span-1 w-108 border-4 border-black/50 rounded-xl hover:bg-black/10 p-2">
               <Radar data={chartDataBlack} options={chartOptionsBlack} />
             </div>
           </div>
