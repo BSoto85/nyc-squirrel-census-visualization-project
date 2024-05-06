@@ -3,12 +3,29 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="landing-page">
-      <section className="intro">
-        <p>
+    <div className="py-24 relative">
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        autoPlay
+        loop
+        muted
+      >
+        <source
+          src="https://res.cloudinary.com/dvmczcg3f/video/upload/v1715037393/throwaways/squirrelvid_jbcpm6.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Content */}
+      <section className="text-center bg-green-400/60 p-4 mx-48 rounded-lg inline-block relative z-10">
+        <h1 className="text-6xl mb-6 font-semibold text-white">
           Welcome to Squirrel Sphere: Your Gateway to Central Park's Squirrel
-          Kingdom! Dive into the bustling world of Central Park's squirrels with
-          our innovative web app, combining advanced mapping technology and
+          Kingdom
+        </h1>
+        <p className="text-2xl font-semibold text-white">
+          Dive into the bustling world of Central Park's squirrels with our
+          innovative web app, combining advanced mapping technology and
           insightful demographic charts. Explore the elusive black squirrels,
           the rarest gem in the park, through our curated data on behavior,
           distribution, and population trends. Whether you're a seasoned
@@ -17,42 +34,14 @@ const Home = () => {
           kingdom. Start your adventure today and navigate the wonders of
           nature, one squirrel at a time!
         </p>
-        <Link to={"/map"}>
-          <button>Let's find some squirrels!!</button>
-        </Link>
       </section>
-      <section className="images">
-        <img
-          src="https://images.unsplash.com/photo-1533651180995-3b8dcd33e834?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3F1aXJyZWx8ZW58MHx8MHx8fDA%3D"
-          alt="Squirrel standing upright on branch"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1618794810603-4b384ce62737?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNxdWlycmVsfGVufDB8fDB8fHww"
-          alt="Squirrel laying along branch"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1614740569711-3434bbc357ff?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHNxdWlycmVsfGVufDB8fDB8fHww"
-          alt="Close-up of squirrel with snow"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1610653123505-6480cc9b37f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fHNxdWlycmVsfGVufDB8fDB8fHww"
-          alt="Squirrel on bench"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1579695876236-e8ce73e1f498?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTV8fHNxdWlycmVsfGVufDB8fDB8fHww"
-          alt="Albino squirrel"
-        />
-        <section>
-          <img
-            src="https://media.istockphoto.com/id/1493474312/photo/a-black-squirrel-poses-by-the-birdhouse.webp?b=1&s=170667a&w=0&k=20&c=q3pKO65TuifaSnawYdoTL5U4T0lYETTdrAk4zpZQt1U="
-            alt="Black squirrel on bench"
-          />
-          <img
-            src="https://media.istockphoto.com/id/1338274606/photo/black-squirrel-with-walnut-fruit.webp?b=1&s=170667a&w=0&k=20&c=ZbYDY5kaO49qhQ6sHVJuj1uTWotSWoVgnOELk16DPT8="
-            alt="Black squirrel carrying an acorn"
-          />
-        </section>
-      </section>
+
+      {/* Button */}
+      <Link to={"/charts"} className="flex justify-center relative z-10 mt-6">
+        <button className="bg-green-500/40 text-3xl rounded-2xl text-center p-5 m-4 hover:bg-green-200/50 hover:border-2 hover:border-green-500/90 text-white font-bold">
+          Let's find some squirrels!!
+        </button>
+      </Link>
     </div>
   );
 };
