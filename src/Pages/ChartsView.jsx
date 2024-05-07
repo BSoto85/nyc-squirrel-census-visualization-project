@@ -6,6 +6,7 @@ import DropDownMenu from "../Components/DropDownMenu";
 import RadarChart from "../Components/RadarChart";
 import "../Components/Chart.css";
 
+
 const ChartsView = () => {
   const [chartType, setChartType] = useState("Pie");
   const [scatterAndRadarSquirrelData, setScatterAndRadarSquirrelData] =
@@ -14,6 +15,7 @@ const ChartsView = () => {
 
   return (
     <div>
+      <RadarChart />
       <DropDownMenu chartType={chartType} setChartType={setChartType} />
       <PieChart
         chartType={chartType}
