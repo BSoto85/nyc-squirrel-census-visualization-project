@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Radar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 
 Chart.register(...registerables);
-
-const RadarChart = () => {
-  const [squirrelData, setSquirrelData] = useState([]);
+const RadarChart = ({
+  scatterAndRadarSquirrelData,
+  setScatterAndRadarSquirrelData,
+  chartType,
+}) => {
+  console.log(scatterAndRadarSquirrelData);
   //api endpoint is exceeding limit w/ no account will only return approx. 1000 entries
   // const apiUrl = `https://data.cityofnewyork.us/resource/vfnx-vebw.json?$query=SELECT%20x%2C%20y%2C%20unique_squirrel_id%2C%20date%2C%20primary_fur_color%20ORDER%20BY%20date%20DESC`;
 
@@ -26,7 +29,7 @@ const RadarChart = () => {
   const s6LongitudeLowerRange = -73.9773321;
   const s6LongitudeUpperRange = -73.9731212;
 
-  const firstSectionSquirrels = squirrelData.filter(
+  const firstSectionSquirrels = scatterAndRadarSquirrelData.filter(
     (squirrel) =>
       squirrel.x >= s1LongitudeLowerRange &&
       squirrel.x <= s1LongitudeUpperRange &&
@@ -35,7 +38,7 @@ const RadarChart = () => {
   );
 
   //figure out why 2nd section doesn't get any data probably the boundaries + conditionals given to filter data
-  const secondSectionSquirrels = squirrelData.filter(
+  const secondSectionSquirrels = scatterAndRadarSquirrelData.filter(
     (squirrel) =>
       squirrel.x >= s2LongitudeLowerRange &&
       squirrel.x <= s2LongitudeUpperRange &&
@@ -43,7 +46,7 @@ const RadarChart = () => {
       squirrel.y <= latitudeUpperRange
   );
 
-  const thirdSectionSquirrels = squirrelData.filter(
+  const thirdSectionSquirrels = scatterAndRadarSquirrelData.filter(
     (squirrel) =>
       squirrel.x >= s3LongitudeLowerRange &&
       squirrel.x <= s3LongitudeUpperRange &&
@@ -51,7 +54,7 @@ const RadarChart = () => {
       squirrel.y <= latitudeUpperRange
   );
 
-  const fourthSectionSquirrels = squirrelData.filter(
+  const fourthSectionSquirrels = scatterAndRadarSquirrelData.filter(
     (squirrel) =>
       squirrel.x >= s4LongitudeLowerRange &&
       squirrel.x <= s4LongitudeUpperRange &&
@@ -59,7 +62,7 @@ const RadarChart = () => {
       squirrel.y <= latitudeUpperRange
   );
 
-  const fifthSectionSquirrels = squirrelData.filter(
+  const fifthSectionSquirrels = scatterAndRadarSquirrelData.filter(
     (squirrel) =>
       squirrel.x >= s5LongitudeLowerRange &&
       squirrel.x <= s5LongitudeUpperRange &&
@@ -68,7 +71,7 @@ const RadarChart = () => {
   );
 
   //figure out why 6th section doesn't get any data probably the boundaries + conditionals given to filter data
-  const sixthSectionSquirrels = squirrelData.filter(
+  const sixthSectionSquirrels = scatterAndRadarSquirrelData.filter(
     (squirrel) =>
       squirrel.x >= s6LongitudeLowerRange &&
       squirrel.x <= s6LongitudeUpperRange &&
@@ -300,7 +303,7 @@ const RadarChart = () => {
       .then((res) => res.json())
       .then((data) => {
         // console.log("Response data:", data);
-        setSquirrelData(data);
+        setScatterAndRadarSquirrelData(data);
       })
       // .then(() => )
       .catch((error) => {
@@ -324,7 +327,12 @@ const RadarChart = () => {
 
   return (
     <>
-      <div className="py-24">
+      <div
+        style={
+          chartType === "Radar" ? { display: "block" } : { display: "none" }
+        }
+        className="py-24"
+      >
         {/* <div className="text-center text-4xl pb-12">
           Squirrel Distribution Chart In Central Park
         </div> */}
