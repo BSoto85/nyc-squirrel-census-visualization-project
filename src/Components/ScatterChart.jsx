@@ -79,13 +79,6 @@ const ScatterChart = ({
         radius: 8,
       },
     },
-    // plugins: {
-    //   legend: {
-    //     display: true,
-    //     position: "top",
-    //     align: "end",
-    //   },
-    // },
   };
 
   useEffect(() => {
@@ -95,8 +88,6 @@ const ScatterChart = ({
       .then((res) => res.json())
       .then((data) => setScatterAndRadarSquirrelData(data));
   }, []);
-  console.log(scatterAndRadarSquirrelData);
-  console.log(filterSquirrelsByColor("Gray"));
 
   return (
     <div
@@ -106,10 +97,6 @@ const ScatterChart = ({
       }
     >
       <Scatter data={scatterData} options={options} />
-      {/* <img
-        src="https://res.cloudinary.com/dnqfg86zq/image/upload/v1714941996/oemyj1vgf0gmsa2et7wk.png"
-        alt="Map of Central Park"
-      /> */}
     </div>
   );
 };

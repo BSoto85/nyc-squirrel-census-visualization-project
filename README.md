@@ -25,9 +25,10 @@ Squirrel Sphere serves as Lily's digital companion on her journey to discover Ce
 ## Functionality
 
 - We start on the landing page of Squirrel Sphere, where we find a cute video of a squirrel in the background and an introduction to our web app.
-- The navbar has three links: _Squirrel Sphere_, which will always take you back the the landing page, _Charts_, which will take you to our charts view, and _About_, which will take you to a view where you can find information about our devs.
+- The navbar has three links: `Squirrel Sphere`, which will always take you back the the landing page, `Charts`, which will take you to our charts view, and `About`, which will take you to a view where you can find information about our devs.
 - Click on the `Let's find some squirrels!!` or `Charts` button to head to our chart view.
-- A drop down menu greets you on the chart view, where you can select from four charts: Bar, Pie, Scatter, and Radar, to learn more about our furry friends.
+- A drop down menu greets you on the chart view, where you can select from four charts: **Bar**, **Pie**, **Scatter**, and **Radar**, to learn more about our furry friends.
+- Click on the _About_
 
 ## Wireframes
 

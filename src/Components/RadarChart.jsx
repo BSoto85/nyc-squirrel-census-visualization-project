@@ -6,6 +6,7 @@ Chart.register(...registerables);
 
 const RadarChart = () => {
   const [squirrelData, setSquirrelData] = useState([]);
+
   //api endpoint is exceeding limit w/ no account will only return approx. 1000 entries
   // const apiUrl = `https://data.cityofnewyork.us/resource/vfnx-vebw.json?$query=SELECT%20x%2C%20y%2C%20unique_squirrel_id%2C%20date%2C%20primary_fur_color%20ORDER%20BY%20date%20DESC`;
 
@@ -324,7 +325,12 @@ const RadarChart = () => {
 
   return (
     <>
-      <div className="py-24">
+      <div
+        style={
+          chartType === "Radar" ? { display: "block" } : { display: "none" }
+        }
+        className="py-24"
+      >
         {/* <div className="text-center text-4xl pb-12">
           Squirrel Distribution Chart In Central Park
         </div> */}
