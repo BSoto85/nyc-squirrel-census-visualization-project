@@ -6,7 +6,7 @@ import DropDownMenu from "../Components/DropDownMenu";
 import "../Components/Chart.css";
 
 const ChartsView = () => {
-  const [chartType, setChartType] = useState("");
+  const [chartType, setChartType] = useState("Pie");
   const [scatterAndRadarSquirrelData, setScatterAndRadarSquirrelData] =
     useState([]);
 
