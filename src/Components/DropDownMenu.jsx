@@ -15,8 +15,8 @@ const DropDownMenu = ({ chartType, setChartType }) => {
           onChange={handleTextChange}
           required
         >
-          <option value="none">Select a Chart</option>
-          <option value="Bar">Bar Chart</option>
+          {/* <option value="none">Select a Chart</option> */}
+          {/* <option value="Bar">Bar Chart</option> */}
           <option value="Pie">Pie Chart</option>
           <option value="Scatter">Scatter Chart</option>
           <option value="Radar">Radar Chart</option>
