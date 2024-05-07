@@ -302,7 +302,7 @@ const RadarChart = ({
     )
       .then((res) => res.json())
       .then((data) => {
-        // console.log("Response data:", data);
+        console.log("Response data:", data);
         setScatterAndRadarSquirrelData(data);
       })
       // .then(() => )
@@ -336,7 +336,12 @@ const RadarChart = ({
         {/* <div className="text-center text-4xl pb-12">
           Squirrel Distribution Chart In Central Park
         </div> */}
-        <div className="flex justify-center">
+        <div
+          className="flex justify-center"
+          style={
+            chartType === "Radar" ? { display: "block" } : { display: "none" }
+          }
+        >
           <div className="grid grid-cols-1 gap-8 mx-4 md:grid-cols-3">
             <div className="col-span-1 w-108 border-4 border-gray-300 rounded-xl hover:bg-gray-100 p-2">
               <Radar data={chartDataGrey} options={chartOptionsGrey} />
