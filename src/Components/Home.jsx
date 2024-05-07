@@ -18,7 +18,7 @@ const Home = () => {
       </video>
 
       {/* Content */}
-      <section className="text-center bg-green-400/60 p-4 mx-48 rounded-lg inline-block relative z-10">
+      <section className="text-center bg-green-400/30 p-4 mx-48 rounded-lg inline-block relative z-10">
         <h1 className="text-6xl mb-6 font-semibold text-white">
           Welcome to Squirrel Sphere: Your Gateway to Central Park's Squirrel
           Kingdom
@@ -38,7 +38,7 @@ const Home = () => {
 
       {/* Button */}
       <Link to={"/charts"} className="flex justify-center relative z-10 mt-6">
-        <button className="bg-green-500/40 text-3xl rounded-2xl text-center p-5 m-4 hover:bg-green-200/50 hover:border-2 hover:border-green-500/90 text-white font-bold">
+        <button className="bg-green-500/30 text-3xl rounded-2xl text-center p-5 m-4 hover:bg-green-200/50 hover:border-2 hover:border-green-500/90 text-white font-bold">
           Let's find some squirrels!!
         </button>
       </Link>

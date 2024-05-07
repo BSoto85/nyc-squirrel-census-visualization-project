@@ -324,10 +324,10 @@ const RadarChart = () => {
 
   return (
     <>
-      <div className="pt-12 pb-24">
-        <div className="text-center text-4xl pb-12">
+      <div className="py-24">
+        {/* <div className="text-center text-4xl pb-12">
           Squirrel Distribution Chart In Central Park
-        </div>
+        </div> */}
         <div className="flex justify-center">
           <div className="grid grid-cols-1 gap-8 mx-4 md:grid-cols-3">
             <div className="col-span-1 w-108 border-4 border-gray-300 rounded-xl hover:bg-gray-100 p-2">
